@@ -1,0 +1,22 @@
+spec:
+  name: test-strapi
+
+  services:
+  - name: api
+    environment_slug: node-js
+    git:
+      branch: main
+      repo_clone_url: https://github.com/felipebarcelospro/test-strapi
+    source_dir: api
+    routes:
+    - path: /api
+
+  - name: frontend
+    build_command: npm run build
+    environment_slug: node-js
+    git:
+      branch: main
+      repo_clone_url: https://github.com/felipebarcelospro/test-strapi
+    source_dir: frontend
+    routes:
+    - path: /

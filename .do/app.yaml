@@ -1,0 +1,23 @@
+name: test-strapi
+
+services:
+- name: api
+  environment_slug: node-js
+  github:
+    branch: main    
+    repo: felipebarcelospro/test-strapi
+    deploy_on_push: true
+  source_dir: api
+  routes:
+  - path: /api
+
+- name: sample-nextjs
+  build_command: npm run build
+  environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: felipebarcelospro/test-strapi
+  source_dir: frontend
+  routes:
+  - path: /frontend
