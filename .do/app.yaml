@@ -15,13 +15,3 @@ services:
   routes:
   - path: /api
 
-- name: frontend
-  build_command: npm run build
-  environment_slug: node-js
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: felipebarcelospro/test-strapi
-  source_dir: frontend
-  routes:
-  - path: /frontend
