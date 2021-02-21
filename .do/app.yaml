@@ -9,6 +9,9 @@ services:
     repo: felipebarcelospro/test-strapi
     deploy_on_push: true
   source_dir: api
+  envs: 
+    - NODE_ENV: production
+  http_port: 1337
   routes:
   - path: /api
 

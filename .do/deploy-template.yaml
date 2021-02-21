@@ -3,12 +3,15 @@ spec:
 
   services:
   - name: api
-    build_command: NODE_ENV=production npm run build
+    build_command: npm run build
     environment_slug: node-js
     git:
       branch: main
       repo_clone_url: https://github.com/felipebarcelospro/test-strapi
     source_dir: api
+    envs: 
+      - NODE_ENV: production
+    http_port: 1337
     routes:
     - path: /api
 
